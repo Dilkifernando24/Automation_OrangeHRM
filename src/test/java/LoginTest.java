@@ -12,17 +12,19 @@ public class LoginTest {
 	LoginPage loginpage;
 	
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		loginpage = new LoginPage(driver);
+		Thread.sleep(1000);
 	}
 	
 	@Test
-	public void validLogin() {
+	public void validLogin() throws InterruptedException {
 		loginpage.enterCredentials("Admin", "admin123");
 		loginpage.clickLogin();
+		Thread.sleep(500);
 	}
 	
 	@AfterMethod

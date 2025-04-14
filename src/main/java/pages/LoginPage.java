@@ -7,8 +7,8 @@ public class LoginPage {
 	
 	WebDriver driver;
 	
-	By username = By.xpath("//input[@name=\"username\"]");
-	By password = By.xpath("//input[@name=\"password\"]");
+	By username = By.xpath("//input[@placeholder='Username']");
+	By password = By.xpath("//input[@placeholder='Password']");
 	By loginBtn = By.xpath("//button[@type=\"submit\"]");
 	
 	public LoginPage(WebDriver driver) {
