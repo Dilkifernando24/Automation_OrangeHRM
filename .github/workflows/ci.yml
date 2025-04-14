@@ -14,7 +14,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
  
-    - name: Set up Java
+    - name: Set up Java 18
       uses: actions/setup-java@v3
       with:
         java-version: '18'
@@ -27,9 +27,11 @@ jobs:
       run: mvn -v
       
     - name: Set up Maven
-      uses: s4u/setup-maven-action@v1
+      uses: actions/setup-java@v3 # using setup-java to also install Maven
       with:
-          maven-version: '3.9.6' #update this version if necessary
- 
+          java-version: '18'
+          distribution: 'temurin'
+          cache: maven
+   
     - name: Run Tests with Maven
       run: mvn clean test
