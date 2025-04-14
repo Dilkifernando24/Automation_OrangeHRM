@@ -22,11 +22,14 @@ jobs:
  
     - name: Set up Chrome
       uses: browser-actions/setup-chrome@v1
+
+    - name: Check Maven version
+      run: mvn -v
       
     - name: Set up Maven
       uses: s4u/setup-maven-action@v1
       with:
-          maven-version: '3.9.6'
+          maven-version: '3.9.6' #update this version if necessary
  
     - name: Run Tests with Maven
       run: mvn clean test
