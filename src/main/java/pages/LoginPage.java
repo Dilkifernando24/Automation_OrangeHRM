@@ -15,8 +15,8 @@ public class LoginPage {
 		this.driver = driver;
 	}
 	
-	public void enterCredentials(String userName, String Password) {
-		driver.findElement(username).sendKeys(userName);
+	public void enterCredentials(String Username, String Password) {
+		driver.findElement(username).sendKeys(Username);
 		driver.findElement(password).sendKeys(Password);
 		
 	}
