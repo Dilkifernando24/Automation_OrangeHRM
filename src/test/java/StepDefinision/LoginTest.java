@@ -32,5 +32,11 @@ public class LoginTest {
 	public void click_login_button() {
 		loginpage.clickLogin();
 	}
+	
+	@Then("verify the sucsuccfully user login")
+	public void verify_the_sucsuccfully_user_login() {
+		loginpage.verifylogin();
+	    
+	}
 
 }

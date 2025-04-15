@@ -4,6 +4,7 @@ Feature: Login to the OrangeHRM
     Given navigate to the OrangeHRM 
     And enter <Username> and <Password>
     Then click login button
+    And verify the successfully user login
 
 
     Examples: 
