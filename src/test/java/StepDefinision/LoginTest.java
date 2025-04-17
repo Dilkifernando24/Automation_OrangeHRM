@@ -33,7 +33,7 @@ public class LoginTest {
 		loginpage.clickLogin();
 	}
 	
-	@Then("verify the sucsuccfully user login")
+	@Then("verify the successfully user login")
 	public void verify_the_sucsuccfully_user_login() {
 		loginpage.verifylogin();
 	    
