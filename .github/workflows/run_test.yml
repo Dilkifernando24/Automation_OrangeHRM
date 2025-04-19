@@ -1,0 +1,21 @@
+name: Run Selenium Tests
+
+on:
+  workflow_dispatch:  # 👈 This enables manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'  # Adjust based on your project
+
+    - name: Build and run tests
+      run: mvn clean install
