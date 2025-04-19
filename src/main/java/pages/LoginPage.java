@@ -35,6 +35,7 @@ public class LoginPage {
 	public void verifylogin() {
 		String dashboardHeader = wait.until(ExpectedConditions.visibilityOfElementLocated(dashboard)).getText();
 		Assert.assertEquals("Login was not successful!", "Dashboard", dashboardHeader);
+		System.out.println("User Successfully Login to the OrangeHRM" + dashboardHeader );
 	}
 
 }
